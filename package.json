@@ -7,7 +7,7 @@
   "license": "CC-BY-NC-4.0",
   "scripts": {
     "start": "webpack-dev-server --config ./_config/builder/webpack.development.js",
-    "build": "webpack --config ./_config/builder/webpack.production.js",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider webpack --config ./_config/builder/webpack.production.js",
     "lint": "yarn lint:tsc && yarn lint:eslint",
     "lint:tsc": "tsc --noEmit",
     "lint:eslint": "eslint src --ext .ts",
