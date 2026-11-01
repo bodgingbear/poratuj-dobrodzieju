@@ -12,7 +12,9 @@
     "lint:tsc": "tsc --noEmit",
     "lint:eslint": "eslint src --ext .ts",
     "electron:dev": "electron ./electron.js",
-    "electron:dist": "electron-builder -mw -c _config/electron/electron-builder.json"
+    "electron:dist": "electron-builder -mw -c _config/electron/electron-builder.json",
+    "build:cf": "npm run build && rm -rf cf-dist && mkdir -p cf-dist/projects/poratuj-dobrodzieju/play && cp -R public/. cf-dist/projects/poratuj-dobrodzieju/play/",
+    "deploy": "wrangler deploy"
   },
   "dependencies": {
     "phaser": "^3.22.0"
